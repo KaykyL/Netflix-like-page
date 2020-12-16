@@ -1,6 +1,6 @@
 :root {
-    --netiflixRed: #E50914;
-    --netflixBlack: #141414;
+    --mediaflixYellow: #f3cf00;
+    --mediaflixBlack: #1b1725;
 }
 
 * {
@@ -13,38 +13,94 @@
 /* Basic elements */
 
 body {
-    background: var(--netflixBlack);
+    background: var(--mediaflixBlack);
     font-family: 'Arial', Times, serif;
     color: white;
 }
 
-header .container {
+#main-header {
+    position: fixed;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: var(--mediaflixBlack);
+    z-index: 50;
+}
+
+#main-header .container {
+    height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-header .logo {
-    color: var(--netiflixRed);
+#main-header .logo {
+    color: var(--mediaflixYellow);
     font-family: 'Arial Black', Times;
     font-size: 40px;
 }
 
-header nav a {
-    text-decoration: none;
-    color: #AAA;
-    margin-right: 10px;
+.search-wrapper {
+    display: flex;
+    width: 900px;
+    height: 80px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-header nav a:hover {
+.search-bar {
+    width: 60%;
+    height: 40px;
+    left: 0px;
+    padding: 0px 25px;
+    outline: none;
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-button {
+    right: 0px;
+    margin-left: 5px;
+    width: 30%;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s all;
+    text-align: center;
+}
+
+.search-button:hover {
+    background-color: white;
+    color: var(--mediaflixBlack);
+}
+
+#main-header nav a {
+    color: #ccc;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+#main-header nav a:hover {
     color: #fff;
 }
 
+#main-header nav a i {
+    margin-right: 5px;
+}
 
-/* Principal movie */
 
-.principal-movie {
+/* Main movie */
+
+.main-movie {
     font-size: 16px;
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)100%), url('https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABUb8y4ccuEVy561Cyng-U7DYPnvBSEtASh7jutgnPDpIpjLmnSW3ke7syU6UCS9XFi9WbJ3PDfMRN3qwuzCP6iTlMTnB.jpg?r=72c');
     height: 400px;
@@ -55,12 +111,12 @@ header nav a:hover {
     align-items: flex-start;
 }
 
-.principal-movie .description {
+.main-movie .description {
     margin-top: 10px;
     margin-bottom: 40px;
 }
 
-.principal-movie .title {
+.main-movie .title {
     margin-top: 15%;
     font-size: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -91,14 +147,23 @@ header nav a:hover {
     margin-left: 20px;
 }
 
-.principal-movie .container {
+.main-movie .container {
     width: 70%;
 }
 
-.box-movie {
-    height: 100%;
+.square-item .box-movie,
+.item .box-movie {
+    filter: brightness(90%);
     width: 100%;
-    border-radius: 8px;
+    margin: auto;
+    opacity: 0.86;
+}
+
+.item:hover .box-movie,
+.square-item:hover .box-movie {
+    filter: brightness(108%);
+    transition: .5s all ease-in-out;
+    opacity: 1;
 }
 
 .carousel-movies {
@@ -108,4 +173,28 @@ header nav a:hover {
 .collection-name {
     font-size: 25px;
     margin: 30px 30px 10px 30px;
+}
+
+.item {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: 0.35 all;
+    border: 3px solid transparent;
+}
+
+.item:hover {
+    border: 2.3px solid var(--mediaflixYellow);
+}
+
+.square-item {
+    height: 360px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: 0.35 all;
+    border: 3px solid transparent;
+}
+
+.square-item:hover {
+    border: 2.3px solid var(--mediaflixYellow);
 }
