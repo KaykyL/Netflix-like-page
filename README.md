@@ -1,3 +1,3 @@
-# Uma simples página HTML, que busca criar a interface de início de um sistema de streaming imaginário inspirado na Netflix.
+# Uma página HTML simples, que visa criar a interface inicial para um serviço de streaming imaginário, este que é inspirado na Netflix.
 
-## Media Strem é um serviço de stremming imáginário que não só oference aos usuários filmes e séries, mas também, entreterimento através de outros tipos de mídias, como livros, jogos e músicas.
+## Media Strem é um serviço de stremming imaginário que oferece não apenas filmes e séries aos usuários, mas também entretenimento por meio de outros tipos de mídia, como livros, jogos e música.
