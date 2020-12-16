@@ -30,7 +30,7 @@
         font-size: 17px;
         height: 40px;
     }
-    .main-movie {
+    .main-title {
         height: 500px;
         margin-bottom: 20px;
     }
@@ -42,12 +42,29 @@
         font-size: 26.5px;
         margin: 8px 30px 10px 30px;
     }
-    .square-item .box-movie,
-    .item .box-movie {
+    .square-item .title-image,
+    .item .title-image {
         filter: brightness(100%);
         width: 100%;
         margin: auto;
         opacity: 1;
+    }
+    .item-view .buttonNet {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 50px;
+        border: 2px solid white;
+        padding: 15px 30px;
+        color: white;
+    }
+    footer {
+        height: auto;
+        flex-direction: column;
+        padding: 15px 0px;
+    }
+    footer a,
+    footer h6 {
+        margin: 10px 0px;
+        font-size: 18px;
     }
 }
 
